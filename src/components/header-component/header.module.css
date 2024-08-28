@@ -1,0 +1,173 @@
+.header {
+   position: absolute;
+   display: flex;
+   width: 80%;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+   top: 3rem;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 999;
+}
+
+.header h1 {
+   color: white;
+   font-weight: 500;
+}
+
+.information-container {
+   width: 100%;
+   display: flex;
+   background-color: white;
+   padding: 2rem;
+   border-radius: 1rem;
+}
+
+.information-box {
+   width: 23%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.box-title {
+   color: var(--Dark-Gray);
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 0.8rem;
+}
+
+.box-content {
+   font-weight: 600;
+   font-size: 1.2rem;
+}
+
+.vertical-separator {
+   margin: 0 3%;
+   height: 100px;
+   width: 1px;
+   background-color: var(--Dark-Gray);
+}
+
+.search-form {
+   width: 45%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   gap: 0;
+   height: 3rem;
+}
+
+.search-input {
+   width: 90%;
+   min-height: 100%;
+   border: var(--Dark-Gray);
+   color: black;
+   font-size: 1.2rem;
+   padding: 0.7rem 2rem;
+   border-radius: 10px 0px 0px 10px;
+}
+
+.search-input::placeholder {
+   color: var(--Dark-Gray);
+}
+
+.search-submit-button {
+   width: 10%;
+   height: 100%;
+   background-color: var(--Dark-Gray);
+   cursor: pointer;
+   border: none;
+   outline: none;
+   transition: 0.2s ease-in-out;
+   border-radius: 0px 10px 10px 0px;
+}
+
+.search-submit-button:hover {
+   background-color: rgb(60, 60, 60)
+}
+
+@media (max-width: 770px) {
+   .header {
+      width: 100%;
+      top: 1rem;
+      gap: 1.5rem;
+   }
+
+   .information-container {
+      width: 90%;
+   }
+
+   .box-title {
+      font-size: 0.6rem;
+   }
+
+   .box-content {
+      font-size: 0.8rem;
+   }
+
+   .search-form {
+      height: 2rem;
+   }
+
+   .search-input {
+      padding: 0.3rem 2rem;
+   }
+}
+
+@media (max-width: 400px) {
+   .header {
+      width: 100%;
+      top: 0.5rem;
+      gap: 1rem;
+
+   }
+
+   .header h1 {
+      font-size: 1.2rem;
+   }
+
+   .information-container {
+      width: 80%;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.7rem 2rem;
+   }
+
+   .information-box {
+      width: 100%;
+      gap: 0.3rem;
+   }
+
+   .vertical-separator {
+      display: none;
+   }
+
+   .box-title {
+      font-size: 0.6rem;
+   }
+
+   .box-content {
+      font-size: 0.8rem;
+   }
+
+   .search-form {
+      height: 2rem;
+   }
+
+   .search-form {
+      width: 80%;
+   }
+
+   .search-input {
+      width: 85%;
+      padding: 0.3rem 2rem;
+   }
+
+   .search-submit-button {
+      width: 15%;
+   }
+}

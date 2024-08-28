@@ -6,6 +6,7 @@ import {
   backgroundImageForDesktop,
   backgroundImageForMobile,
 } from "../constants/imagesImports";
+import Header from "../components/header-component/header";
 
 function App() {
   const [loadedInnerWidth, setLoadedInnerWidth] = useState(1400);
@@ -20,6 +21,7 @@ function App() {
   });
   return (
     <div className={styles.main}>
+      <Header />
       <img
         className={styles["background-image"]}
         src={

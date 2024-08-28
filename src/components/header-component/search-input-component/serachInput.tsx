@@ -21,9 +21,13 @@ function SearchInput() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("ip")} className={styles["searchInput"]} />
-      <button type="submit" disabled={!isDirty || !isValid || isSubmitting}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles["search-form"]}>
+      <input {...register("ip")} className={styles["search-input"]} />
+      <button
+        type="submit"
+        disabled={!isDirty || !isValid || isSubmitting}
+        className={styles["search-submit-button"]}
+      >
         {isSubmitting ? "loading" : <img src={ArrowIcon} alt="" />}
       </button>
     </form>
