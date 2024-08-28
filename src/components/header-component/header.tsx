@@ -2,6 +2,18 @@ import SearchInput from "./search-input-component/serachInput";
 import styles from "./header.module.css";
 import { useAppSelector } from "../../store/applicationStore";
 
+function InformationBox({
+  title,
+  value,
+}: Readonly<{ title: string; value: string | undefined }>) {
+  return (
+    <div className={styles["information-box"]}>
+      <p className={styles["box-title"]}>{title}</p>
+      <p className={styles["box-content"]}>{value}</p>
+    </div>
+  );
+}
+
 function Header() {
   const { location, ip, isp } = useAppSelector((state) => state.search);
   return (
@@ -9,27 +21,16 @@ function Header() {
       <h1>IP Address Tracker</h1>
       <SearchInput />
       <div className={styles["information-container"]}>
-        <div className={styles["information-box"]}>
-          <p className={styles["box-title"]}>ip address</p>
-          <p className={styles["box-content"]}>{ip}</p>
-        </div>
+        <InformationBox title="ip address" value={ip} />
         <div className={styles["vertical-separator"]}></div>
-        <div className={styles["information-box"]}>
-          <p className={styles["box-title"]}>location</p>
-          <p className={styles["box-content"]}>
-            {location.city + "," + location.country + "," + location.region}
-          </p>
-        </div>
+        <InformationBox
+          title="location"
+          value={location.city + "," + location.country + "," + location.region}
+        />
         <div className={styles["vertical-separator"]}></div>
-        <div className={styles["information-box"]}>
-          <p className={styles["box-title"]}>timezone</p>
-          <p className={styles["box-content"]}>{location.timezone}</p>
-        </div>
+        <InformationBox title="timezone" value={location.timezone} />
         <div className={styles["vertical-separator"]}></div>
-        <div className={styles["information-box"]}>
-          <p className={styles["box-title"]}>isp</p>
-          <p className={styles["box-content"]}>{isp}</p>
-        </div>
+        <InformationBox title="isp" value={isp} />
       </div>
     </div>
   );

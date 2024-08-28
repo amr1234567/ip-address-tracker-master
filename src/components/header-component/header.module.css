@@ -121,7 +121,6 @@
       width: 100%;
       top: 0.5rem;
       gap: 1rem;
-
    }
 
    .header h1 {
@@ -146,19 +145,8 @@
       display: none;
    }
 
-   .box-title {
-      font-size: 0.6rem;
-   }
-
-   .box-content {
-      font-size: 0.8rem;
-   }
-
    .search-form {
       height: 2rem;
-   }
-
-   .search-form {
       width: 80%;
    }
 
